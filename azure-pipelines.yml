@@ -18,6 +18,8 @@ steps:
   persistCredentials: true
 
 - script: |
+    git config user.email "massoumeharmonie@gmail.com" 
+    git config user.name "audreymengue"
     npm install
-    npm run build
+    npm run deploy -- -r https://$(github_pat)@github.com/azugsdemo1
   displayName: 'npm install and build'
